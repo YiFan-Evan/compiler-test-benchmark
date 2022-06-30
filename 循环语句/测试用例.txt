@@ -1,0 +1,12 @@
+{
+ while ( ID == ID )
+ {
+  while ( ID == ID )
+  {
+   while ( ID == ID )
+   {
+    ID = NUM ;
+   }
+  }
+ }
+}

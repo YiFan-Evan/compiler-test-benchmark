@@ -1,0 +1,56 @@
+program =>
+compoundstmt =>
+{ stmts } =>
+{ stmt stmts } =>
+{ stmt stmt stmts } =>
+{ stmt stmt stmt stmts } =>
+{ stmt stmt stmt stmt stmts } =>
+{ stmt stmt stmt stmt stmt stmts } =>
+{ stmt stmt stmt stmt stmt } =>
+{ stmt stmt stmt stmt assgstmt } =>
+{ stmt stmt stmt stmt ID = arithexpr ; } =>
+{ stmt stmt stmt stmt ID = multexpr arithexprprime ; } =>
+{ stmt stmt stmt stmt ID = multexpr ; } =>
+{ stmt stmt stmt stmt ID = simpleexpr multexprprime ; } =>
+{ stmt stmt stmt stmt ID = simpleexpr / simpleexpr multexprprime ; } =>
+{ stmt stmt stmt stmt ID = simpleexpr / simpleexpr ; } =>
+{ stmt stmt stmt stmt ID = simpleexpr / NUM ; } =>
+{ stmt stmt stmt stmt ID = NUM / NUM ; } =>
+{ stmt stmt stmt assgstmt ID = NUM / NUM ; } =>
+{ stmt stmt stmt ID = arithexpr ; ID = NUM / NUM ; } =>
+{ stmt stmt stmt ID = multexpr arithexprprime ; ID = NUM / NUM ; } =>
+{ stmt stmt stmt ID = multexpr ; ID = NUM / NUM ; } =>
+{ stmt stmt stmt ID = simpleexpr multexprprime ; ID = NUM / NUM ; } =>
+{ stmt stmt stmt ID = simpleexpr * simpleexpr multexprprime ; ID = NUM / NUM ; } =>
+{ stmt stmt stmt ID = simpleexpr * simpleexpr ; ID = NUM / NUM ; } =>
+{ stmt stmt stmt ID = simpleexpr * NUM ; ID = NUM / NUM ; } =>
+{ stmt stmt stmt ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt stmt assgstmt ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt stmt ID = arithexpr ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt stmt ID = multexpr arithexprprime ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt stmt ID = multexpr - multexpr arithexprprime ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt stmt ID = multexpr - multexpr ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt stmt ID = multexpr - simpleexpr multexprprime ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt stmt ID = multexpr - simpleexpr ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt stmt ID = multexpr - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt stmt ID = simpleexpr multexprprime - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt stmt ID = simpleexpr - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt stmt ID = NUM - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt assgstmt ID = NUM - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt ID = arithexpr ; ID = NUM - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt ID = multexpr arithexprprime ; ID = NUM - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt ID = multexpr + multexpr arithexprprime ; ID = NUM - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt ID = multexpr + multexpr ; ID = NUM - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt ID = multexpr + simpleexpr multexprprime ; ID = NUM - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt ID = multexpr + simpleexpr ; ID = NUM - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt ID = multexpr + NUM ; ID = NUM - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt ID = simpleexpr multexprprime + NUM ; ID = NUM - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt ID = simpleexpr + NUM ; ID = NUM - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ stmt ID = NUM + NUM ; ID = NUM - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ assgstmt ID = NUM + NUM ; ID = NUM - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ ID = arithexpr ; ID = NUM + NUM ; ID = NUM - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ ID = multexpr arithexprprime ; ID = NUM + NUM ; ID = NUM - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ ID = multexpr ; ID = NUM + NUM ; ID = NUM - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ ID = simpleexpr multexprprime ; ID = NUM + NUM ; ID = NUM - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ ID = simpleexpr ; ID = NUM + NUM ; ID = NUM - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; } =>
+{ ID = NUM ; ID = NUM + NUM ; ID = NUM - NUM ; ID = NUM * NUM ; ID = NUM / NUM ; }

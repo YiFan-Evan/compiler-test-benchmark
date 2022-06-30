@@ -1,0 +1,7 @@
+{
+ ID = NUM ;
+ ID = NUM + NUM ;
+ ID = NUM - NUM ;
+ ID = NUM * NUM ;
+ ID = NUM / NUM ;
+}

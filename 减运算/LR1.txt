@@ -1,0 +1,29 @@
+program =>
+compoundstmt =>
+{ stmts } =>
+{ stmt stmts } =>
+{ stmt } =>
+{ assgstmt } =>
+{ ID = arithexpr ; } =>
+{ ID = multexpr arithexprprime ; } =>
+{ ID = multexpr - multexpr arithexprprime ; } =>
+{ ID = multexpr - multexpr ; } =>
+{ ID = multexpr - simpleexpr multexprprime ; } =>
+{ ID = multexpr - simpleexpr ; } =>
+{ ID = multexpr - ID ; } =>
+{ ID = simpleexpr multexprprime - ID ; } =>
+{ ID = simpleexpr - ID ; } =>
+{ ID = ( arithexpr ) - ID ; } =>
+{ ID = ( multexpr arithexprprime ) - ID ; } =>
+{ ID = ( multexpr - multexpr arithexprprime ) - ID ; } =>
+{ ID = ( multexpr - multexpr - multexpr arithexprprime ) - ID ; } =>
+{ ID = ( multexpr - multexpr - multexpr ) - ID ; } =>
+{ ID = ( multexpr - multexpr - simpleexpr multexprprime ) - ID ; } =>
+{ ID = ( multexpr - multexpr - simpleexpr ) - ID ; } =>
+{ ID = ( multexpr - multexpr - NUM ) - ID ; } =>
+{ ID = ( multexpr - simpleexpr multexprprime - NUM ) - ID ; } =>
+{ ID = ( multexpr - simpleexpr - NUM ) - ID ; } =>
+{ ID = ( multexpr - ID - NUM ) - ID ; } =>
+{ ID = ( simpleexpr multexprprime - ID - NUM ) - ID ; } =>
+{ ID = ( simpleexpr - ID - NUM ) - ID ; } =>
+{ ID = ( ID - ID - NUM ) - ID ; }

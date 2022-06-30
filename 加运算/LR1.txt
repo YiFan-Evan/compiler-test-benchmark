@@ -1,0 +1,38 @@
+program =>
+compoundstmt =>
+{ stmts } =>
+{ stmt stmts } =>
+{ stmt } =>
+{ assgstmt } =>
+{ ID = arithexpr ; } =>
+{ ID = multexpr arithexprprime ; } =>
+{ ID = multexpr + multexpr arithexprprime ; } =>
+{ ID = multexpr + multexpr + multexpr arithexprprime ; } =>
+{ ID = multexpr + multexpr + multexpr ; } =>
+{ ID = multexpr + multexpr + simpleexpr multexprprime ; } =>
+{ ID = multexpr + multexpr + simpleexpr ; } =>
+{ ID = multexpr + multexpr + NUM ; } =>
+{ ID = multexpr + simpleexpr multexprprime + NUM ; } =>
+{ ID = multexpr + simpleexpr + NUM ; } =>
+{ ID = multexpr + ( arithexpr ) + NUM ; } =>
+{ ID = multexpr + ( multexpr arithexprprime ) + NUM ; } =>
+{ ID = multexpr + ( multexpr + multexpr arithexprprime ) + NUM ; } =>
+{ ID = multexpr + ( multexpr + multexpr ) + NUM ; } =>
+{ ID = multexpr + ( multexpr + simpleexpr multexprprime ) + NUM ; } =>
+{ ID = multexpr + ( multexpr + simpleexpr ) + NUM ; } =>
+{ ID = multexpr + ( multexpr + ID ) + NUM ; } =>
+{ ID = multexpr + ( simpleexpr multexprprime + ID ) + NUM ; } =>
+{ ID = multexpr + ( simpleexpr + ID ) + NUM ; } =>
+{ ID = multexpr + ( ID + ID ) + NUM ; } =>
+{ ID = simpleexpr multexprprime + ( ID + ID ) + NUM ; } =>
+{ ID = simpleexpr + ( ID + ID ) + NUM ; } =>
+{ ID = ( arithexpr ) + ( ID + ID ) + NUM ; } =>
+{ ID = ( multexpr arithexprprime ) + ( ID + ID ) + NUM ; } =>
+{ ID = ( multexpr + multexpr arithexprprime ) + ( ID + ID ) + NUM ; } =>
+{ ID = ( multexpr + multexpr ) + ( ID + ID ) + NUM ; } =>
+{ ID = ( multexpr + simpleexpr multexprprime ) + ( ID + ID ) + NUM ; } =>
+{ ID = ( multexpr + simpleexpr ) + ( ID + ID ) + NUM ; } =>
+{ ID = ( multexpr + ID ) + ( ID + ID ) + NUM ; } =>
+{ ID = ( simpleexpr multexprprime + ID ) + ( ID + ID ) + NUM ; } =>
+{ ID = ( simpleexpr + ID ) + ( ID + ID ) + NUM ; } =>
+{ ID = ( ID + ID ) + ( ID + ID ) + NUM ; }

@@ -1,0 +1,28 @@
+program =>
+compoundstmt =>
+{ stmts } =>
+{ stmt stmts } =>
+{ stmt stmt stmts } =>
+{ stmt stmt } =>
+{ stmt compoundstmt } =>
+{ stmt { stmts } } =>
+{ stmt { stmt stmts } } =>
+{ stmt { stmt } } =>
+{ stmt { assgstmt } } =>
+{ stmt { ID = arithexpr ; } } =>
+{ stmt { ID = multexpr arithexprprime ; } } =>
+{ stmt { ID = multexpr ; } } =>
+{ stmt { ID = simpleexpr multexprprime ; } } =>
+{ stmt { ID = simpleexpr ; } } =>
+{ stmt { ID = NUM ; } } =>
+{ compoundstmt { ID = NUM ; } } =>
+{ { stmts } { ID = NUM ; } } =>
+{ { stmt stmts } { ID = NUM ; } } =>
+{ { stmt } { ID = NUM ; } } =>
+{ { assgstmt } { ID = NUM ; } } =>
+{ { ID = arithexpr ; } { ID = NUM ; } } =>
+{ { ID = multexpr arithexprprime ; } { ID = NUM ; } } =>
+{ { ID = multexpr ; } { ID = NUM ; } } =>
+{ { ID = simpleexpr multexprprime ; } { ID = NUM ; } } =>
+{ { ID = simpleexpr ; } { ID = NUM ; } } =>
+{ { ID = NUM ; } { ID = NUM ; } }

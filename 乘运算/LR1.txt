@@ -1,0 +1,27 @@
+program =>
+compoundstmt =>
+{ stmts } =>
+{ stmt stmts } =>
+{ stmt } =>
+{ assgstmt } =>
+{ ID = arithexpr ; } =>
+{ ID = multexpr arithexprprime ; } =>
+{ ID = multexpr ; } =>
+{ ID = simpleexpr multexprprime ; } =>
+{ ID = simpleexpr * simpleexpr multexprprime ; } =>
+{ ID = simpleexpr * simpleexpr * simpleexpr multexprprime ; } =>
+{ ID = simpleexpr * simpleexpr * simpleexpr * simpleexpr multexprprime ; } =>
+{ ID = simpleexpr * simpleexpr * simpleexpr * simpleexpr * simpleexpr multexprprime ; } =>
+{ ID = simpleexpr * simpleexpr * simpleexpr * simpleexpr * simpleexpr ; } =>
+{ ID = simpleexpr * simpleexpr * simpleexpr * simpleexpr * NUM ; } =>
+{ ID = simpleexpr * simpleexpr * simpleexpr * ( arithexpr ) * NUM ; } =>
+{ ID = simpleexpr * simpleexpr * simpleexpr * ( multexpr arithexprprime ) * NUM ; } =>
+{ ID = simpleexpr * simpleexpr * simpleexpr * ( multexpr ) * NUM ; } =>
+{ ID = simpleexpr * simpleexpr * simpleexpr * ( simpleexpr multexprprime ) * NUM ; } =>
+{ ID = simpleexpr * simpleexpr * simpleexpr * ( simpleexpr * simpleexpr multexprprime ) * NUM ; } =>
+{ ID = simpleexpr * simpleexpr * simpleexpr * ( simpleexpr * simpleexpr ) * NUM ; } =>
+{ ID = simpleexpr * simpleexpr * simpleexpr * ( simpleexpr * ID ) * NUM ; } =>
+{ ID = simpleexpr * simpleexpr * simpleexpr * ( ID * ID ) * NUM ; } =>
+{ ID = simpleexpr * simpleexpr * NUM * ( ID * ID ) * NUM ; } =>
+{ ID = simpleexpr * NUM * NUM * ( ID * ID ) * NUM ; } =>
+{ ID = ID * NUM * NUM * ( ID * ID ) * NUM ; }

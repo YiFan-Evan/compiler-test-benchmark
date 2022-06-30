@@ -1,0 +1,6 @@
+{
+ if ( ( ID + NUM ) >= ID - ( NUM * ID ) ) then
+  ID = ID + NUM ;
+ else
+  ID = ID + NUM ;
+}
